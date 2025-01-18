@@ -1,11 +1,11 @@
-# Leaf.js
+# Leaf Flip
 
 A modern TypeScript library for creating realistic page turn effects in web applications. Inspired by turn.js, but rebuilt from the ground up with TypeScript and modern web standards.
 
 ## Installation
 
 ```bash
-npm install leaf-js
+npm install leaf-flip
 ```
 
 ## Basic Usage
@@ -22,7 +22,7 @@ npm install leaf-js
 
 ### JavaScript/TypeScript
 ```typescript
-import { createTurnPage } from 'leaf-js';
+import { createTurnPage } from 'leaf-flip';
 
 const element = document.getElementById('book');
 const book = createTurnPage(element, {
@@ -104,7 +104,7 @@ page.element.addEventListener('flipStart', (e) => {
 
 ### Double Page Book
 ```typescript
-import { createTurnPage } from 'leaf-js';
+import { createTurnPage } from 'leaf-flip';
 
 const book = createTurnPage(element, {
     display: 'double',
@@ -120,7 +120,7 @@ const book = createTurnPage(element, {
 
 ### Single Page Flip
 ```typescript
-import { createFlipPage } from 'leaf-js';
+import { createFlipPage } from 'leaf-flip';
 
 const page = createFlipPage(element, {
     corners: 'all',

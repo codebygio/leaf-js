@@ -1,4 +1,5 @@
-import { defaultLeafOptions, type LeafOptions, events, displays } from "./types";
+import { defaultLeafOptions, displays, events } from "./constants";
+import type { LeafOptions } from "./types";
 import { Utils } from "./utils";
 
 interface PageData {

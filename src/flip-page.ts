@@ -1,9 +1,7 @@
+import { defaultFlipOptions, events, PI } from "./constants";
 import {
-    defaultFlipOptions,
     type FlipOptions,
     type Point2D,
-    events,
-    PI,
 } from "./types";
 
 interface FlipData {

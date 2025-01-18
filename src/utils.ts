@@ -33,12 +33,27 @@ export class Utils {
         return has3d;
     }
 
-    // Add proper rounding to prevent floating point issues
+    // Add CSS transform functions
+    static translate(x: number, y: number, use3d: boolean): string {
+        return this.has3DSupport() && use3d
+            ? `translate3d(${x}px, ${y}px, 0px)`
+            : `translate(${x}px, ${y}px)`;
+    }
+
+    static rotate(degrees: number): string {
+        return `rotate(${degrees}deg)`;
+    }
+
     static createPoint2D(x: number, y: number): Point2D {
         return {
             x: Math.round(x * 1000) / 1000,
             y: Math.round(y * 1000) / 1000
         };
+    }
+
+    // Add transform combine helper
+    static transform(...transforms: string[]): string {
+        return transforms.join(' ');
     }
 
     // Add memoization for expensive calculations
@@ -61,5 +76,10 @@ export class Utils {
 
         this.memoizedBezier.set(key, point);
         return point;
+    }
+
+    // Add cleanup method for memoization
+    static clearMemoization(): void {
+        this.memoizedBezier.clear();
     }
 }
