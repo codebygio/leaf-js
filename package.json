@@ -1,28 +1,46 @@
 {
-  "name": "pkg-template",
+  "name": "leaf-js",
+  "version": "0.0.1",
+  "description": "A modern TypeScript library for creating realistic page turn effects",
+  "author": "Giovani Rodriguez",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codebygio/pkg-template.git"
+    "url": "git+https://github.com/codebygio/leaf-js.git"
   },
-  "version": "0.0.1",
-  "description": "A template for creating npm packages",
+  "bugs": {
+    "url": "https://github.com/codebygio/leaf-js/issues"
+  },
+  "homepage": "https://github.com/codebygio/leaf-js#readme",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "release": "npm run build && changeset publish",
-    "lint": "tsc"
+    "lint": "tsc",
+    "test": "jest",
+    "prepare": "npm run build"
   },
   "keywords": [
-    "npm",
-    "package",
-    "template"
+    "page-turn",
+    "flip",
+    "book",
+    "magazine",
+    "typescript",
+    "animation",
+    "ui",
+    "interface"
   ],
-  "author": "Giovani Rodriguez",
-  "license": "MIT",
   "devDependencies": {
     "@changesets/cli": "^2.27.9",
+    "@types/jest": "^29.5.11",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1",
     "tsup": "^8.3.5",
     "typescript": "^5.6.3"
   }
